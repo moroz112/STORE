@@ -94,7 +94,13 @@ var goods = [
 			memory: "16GB, 32GB and RAM 1 GB"
 		}
 	];
-
+var users = [
+	{
+		id: 1,
+		name: 'ridvan',
+		password: 'maintenance'
+	}
+];
 app.get('/', function(req, res) {
    res.send('Hello API')
 });
@@ -106,4 +112,8 @@ app.post('/goods', function(req, res) {
     console.log('atya');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(goods);
+});
+app.post('/login', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.sendStatus(200);
 });

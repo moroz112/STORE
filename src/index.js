@@ -11,6 +11,8 @@ import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router'
 import Layout from 'containers/layout';
 import Goods from 'containers/goods';
+import Login from 'containers/login';
+import Registration from 'containers/registration';
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
@@ -21,6 +23,8 @@ ReactDOM.render(
 			<Route component={Layout}>
 				<Route path="/" component={Goods}/>
 			</Route>
+			<Route path="login" component={Login}/>
+			<Route path="registration" component={Registration}/>
 		</Router>
 	</Provider>,
 	document.getElementById('root')
